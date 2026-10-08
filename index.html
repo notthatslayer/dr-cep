@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A practical college project for learning disaster preparedness and checking your emergency kit">
+<title>Disaster Ready</title>
+<link rel="stylesheet" href="/theme.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+<header class="site-header">
+<a class="brand" href="#home" aria-label="Disaster Ready home">
+<span class="brand-mark">DR</span>
+<span>Disaster <strong>Ready</strong></span>
+</a>
+<nav class="main-nav" aria-label="Main navigation">
+<a href="#home">Home</a>
+<a href="#disasters">Disasters</a>
+<a href="#checklist">Checklist</a>
+<a href="#kit">Emergency kit</a>
+<a href="#alerts">Alerts</a>
+<a href="#quiz">Quiz</a>
+<a href="#contacts">Contacts</a>
+</nav>
+<button class="button button-small button-dark" id="quick-help" type="button">Quick help</button>
+</header>
+
+<main>
+<section class="hero section-wrap" id="home">
+<div class="hero-copy">
+<span class="eyebrow"><span class="status-dot"></span> COMMUNITY PREPAREDNESS PROJECT</span>
+<h1>Disaster<br><span>Ready</span></h1>
+<p class="hero-lede">Know what to do before, during, and after an emergency. Start with the hazards around you and make a plan with your family.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="#disasters">Learn about disasters <span aria-hidden="true">↗</span></a>
+<a class="button button-outline" href="#checklist">Emergency checklist</a>
+<a class="button button-outline" href="#quiz">Take the safety quiz</a>
+<a class="button button-outline" href="#alerts">Alerts and information</a>
+</div>
+<div class="hero-note"><span aria-hidden="true">✳</span> Practical guidance for students, families, and communities.</div>
+</div>
+<aside class="hero-card" aria-label="Preparedness progress">
+<div class="hero-card-top"><span class="eyebrow">YOUR READINESS</span><span class="card-icon" aria-hidden="true">✓</span></div>
+<h2>Preparation starts at home.</h2>
+<p>Keep essentials together and know where to get reliable help.</p>
+<div class="progress-label"><span>Checklist ready</span><strong id="hero-progress-text">0 of 9</strong></div>
+<div class="progress-track"><span id="hero-progress-bar"></span></div>
+<a href="#checklist" class="text-link">View your checklist <span aria-hidden="true">→</span></a>
+<div class="hero-card-foot"><span>01</span><span>Learn · Prepare · Act</span></div>
+</aside>
+</section>
+
+<section class="intro-strip" aria-label="What you can do here">
+<div><span class="strip-number">01</span>
+<p><strong>Learn the basics</strong><br>Simple guidance for common hazards.</p>
+</div>
+<div><span class="strip-number">02</span>
+<p><strong>Get prepared</strong><br>Build a kit and check off essentials.</p>
+</div>
+<div><span class="strip-number">03</span>
+<p><strong>Practice your response</strong><br>Test what you know with quick questions.</p>
+</div>
+</section>
+
+<section class="section-wrap content-section" id="disasters">
+<div class="section-heading">
+<div><span class="eyebrow">LEARN THE BASICS</span>
+<h2>Choose a situation</h2>
+<p>Pick a hazard to see practical steps for before, during, and after.</p>
+</div>
+<label class="search-box"><span aria-hidden="true">⌕</span><input id="disaster-search" type="search" placeholder="Find a disaster" aria-label="Search disasters"></label>
+</div>
+<div class="disaster-grid" id="disaster-grid"></div>
+<p class="empty-message" id="search-empty" hidden>No matching disasters. Try flood, fire, or earthquake.</p>
+<article class="disaster-detail" id="disaster-detail" aria-live="polite"></article>
+</section>
+
+<section class="section-band" id="checklist">
+<div class="section-wrap content-section">
+<div class="section-heading">
+<div><span class="eyebrow">A LITTLE PREPARATION GOES A LONG WAY</span>
+<h2>Your emergency checklist</h2>
+<p>Tick off what you already have. Your progress is saved on this device.</p>
+</div>
+<div class="check-progress"><strong id="check-progress-text">0 / 9</strong><span>items ready</span></div>
+</div>
+<div class="checklist-layout">
+<div class="checklist-card" id="checklist-items"></div>
+<aside class="checklist-aside"><span class="aside-icon" aria-hidden="true">⌂</span>
+<h3>Make it work for your home</h3>
+<p>Store supplies together where everyone can find them. Review the kit with your family and replace used or expired items.</p>
+<a class="text-link" href="#kit">See what to include <span aria-hidden="true">→</span></a>
+</aside>
+</div>
+</div>
+</section>
+
+<section class="section-wrap content-section" id="kit">
+<div class="section-heading">
+<div><span class="eyebrow">PACK THE BASICS</span>
+<h2>A simple emergency kit</h2>
+<p>Keep essentials in a place that is easy to reach. Adjust supplies to your household.</p>
+</div>
+</div>
+<div class="kit-grid">
+<article class="kit-card"><span aria-hidden="true">◉</span>
+<h3>Water</h3>
+<p>Keep drinking water for each person and refresh it regularly.</p>
+</article>
+<article class="kit-card"><span aria-hidden="true">▤</span>
+<h3>Food</h3>
+<p>Choose familiar, non-perishable food and a manual opener if needed.</p>
+</article>
+<article class="kit-card"><span aria-hidden="true">＋</span>
+<h3>First aid</h3>
+<p>Include basic first aid supplies and items your household uses.</p>
+</article>
+<article class="kit-card"><span aria-hidden="true">☼</span>
+<h3>Torch</h3>
+<p>Keep a working torch and spare batteries together.</p>
+</article>
+<article class="kit-card"><span aria-hidden="true">▰</span>
+<h3>Power bank</h3>
+<p>Charge it from time to time and keep its cable with it.</p>
+</article>
+<article class="kit-card"><span aria-hidden="true">▧</span>
+<h3>Documents</h3>
+<p>Protect copies of important documents in a waterproof pouch.</p>
+</article>
+<article class="kit-card"><span aria-hidden="true">♡</span>
+<h3>Medicines</h3>
+<p>Keep essential personal medicines and relevant instructions.</p>
+</article>
+<article class="kit-card"><span aria-hidden="true">◌</span>
+<h3>Whistle</h3>
+<p>A whistle can help you signal for help if you are trapped.</p>
+</article>
+</div>
+</section>
+
+<section class="alerts-section" id="alerts">
+<div class="section-wrap content-section">
+<div class="section-heading">
+<div><span class="eyebrow">LEARN HOW AN ALERT MAY LOOK</span>
+<h2>Alerts and information</h2>
+<p>These examples are for learning only. They are not live alerts or weather updates.</p>
+</div><span class="demo-badge"><span></span> DEMO ALERT SYSTEM</span>
+</div>
+<div class="alert-grid">
+<article class="alert-card">
+<div class="alert-top"><span class="alert-symbol" aria-hidden="true">i</span><span class="alert-status">Information</span></div>
+<h3>Heavy rainfall</h3>
+<p>Heavy rainfall may cause waterlogging in low-lying areas. Check local authority updates and avoid flooded routes.</p><span class="alert-label">SAMPLE ALERT</span>
+</article>
+<article class="alert-card advisory">
+<div class="alert-top"><span class="alert-symbol" aria-hidden="true">!</span><span class="alert-status">Preparedness advisory</span></div>
+<h3>Strong winds</h3>
+<p>Strong winds are expected during this simulated cyclone alert. Secure loose outdoor items and follow official guidance.</p><span class="alert-label">SAMPLE ALERT</span>
+</article>
+</div>
+<p class="alert-disclaimer">For real updates, use trusted official sources for your area.</p>
+</div>
+</section>
+
+<section class="section-wrap content-section" id="quiz">
+<div class="section-heading">
+<div><span class="eyebrow">CHECK WHAT YOU KNOW</span>
+<h2>Safety quiz</h2>
+<p>Answer all 10 questions, then review the explanations.</p>
+</div><span class="best-score" id="best-score">No quiz completed yet</span>
+</div>
+<form id="quiz-form">
+<div class="quiz-list" id="quiz-questions"></div><button class="button button-primary" type="submit">Check my answers</button>
+</form>
+<div class="quiz-result" id="quiz-result" aria-live="polite" hidden></div>
+</section>
+
+<section class="section-band" id="challenges">
+<div class="section-wrap content-section">
+<div class="section-heading">
+<div><span class="eyebrow">PRACTISE A QUICK DECISION</span>
+<h2>What would you do?</h2>
+<p>Choose an action in each short situation to see why it helps.</p>
+</div>
+</div>
+<div class="challenge-grid" id="challenge-list"></div>
+</div>
+</section>
+
+<section class="section-wrap content-section contacts-section" id="contacts">
+<div class="contact-panel">
+<div><span class="eyebrow">KEEP THIS INFORMATION ACCESSIBLE</span>
+<h2>Emergency contacts</h2>
+<p>In India, <strong>112</strong> is the pan-India emergency response number. Call if you need urgent police, fire, or medical assistance.</p>
+<p class="small-note">For local services and other helplines, check the official website of your state or district. Do not rely on this learning project for live emergency updates.</p>
+</div>
+<a class="contact-number" href="tel:112" aria-label="Call emergency number 112"><span>INDIA EMERGENCY RESPONSE</span><strong>112</strong><span>Tap to call</span></a>
+</div>
+</section>
+
+<section class="section-wrap credits-section">
+<span class="eyebrow">COMMUNITY ENGAGEMENT PROJECT</span>
+<p>Developed by <strong>Samar Shirke</strong> and <strong>Himanshu Gaikar</strong></p>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="section-wrap footer-inner"><a class="brand" href="#home"><span class="brand-mark">DR</span><span>Disaster <strong>Ready</strong></span></a>
+<p>This application provides general preparedness information. During an actual emergency, follow instructions from local authorities and official emergency services.</p><a href="#home">Back to top ↑</a>
+</div>
+</footer>
+
+<div class="quick-overlay" id="quick-overlay" hidden>
+<section class="quick-panel" role="dialog" aria-modal="true" aria-labelledby="quick-title">
+<button class="quick-close" id="quick-close" type="button" aria-label="Return to normal view">×</button>
+<span class="eyebrow">QUICK HELP</span>
+<h2 id="quick-title">Take one safe step at a time.</h2>
+<a class="quick-call" href="tel:112"><span>India emergency response</span><strong>Call 112</strong></a>
+<p class="quick-check-status" id="quick-check-status">Checklist status: 0 of 9 items ready.</p>
+<a class="text-link" id="quick-check-link" href="#checklist">Open my checklist <span aria-hidden="true">→</span></a>
+<h3>Right now</h3>
+<ul>
+<li>Move away from immediate danger if you can do so safely.</li>
+<li>Follow instructions from local authorities.</li>
+<li>Avoid damaged buildings, downed wires, and moving floodwater.</li>
+<li>Tell someone you trust where you are, if possible.</li>
+</ul>
+<p class="small-note">This is general guidance, not a substitute for emergency services.</p>
+<button class="button button-primary" id="quick-return" type="button">Return to normal view</button>
+</section>
+</div>
+<script src="/script.js" defer></script>
+</body>
+
+</html>
